@@ -23,7 +23,7 @@ else:
   for i in range(1, N + 1):
     factorial = 1
     for j in range(1, i + 1):
-      factorial *= j # Вычисляем факториал i
-    result += X ** i / factorial # Добавляем член ряда
+      factorial *= j
+    result += X ** i / factorial
 
   print(f"Приближенное значение exp({X}) с {N} членами ряда: {result}")
