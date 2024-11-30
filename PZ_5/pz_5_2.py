@@ -8,7 +8,7 @@ def PowerA234(A1):
   B = A1 ** 2
   C = A1 ** 3
   D = A1 ** 4
-  return B, C, D
+  return B, C, 0
 A = input('Введите вещественное число А: ')
 while type(A) != float:
     try:
