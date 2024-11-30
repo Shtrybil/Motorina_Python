@@ -9,12 +9,12 @@ def generate_number():
             digits = set()
             for digit in str(number):
                 if digit in digits:
-                    return number
+                    return number # Вернуть число, если найдена одинаковая цифра
                 else:
                     digits.add(digit)
-            return False
+            return False  # Если все цифры уникальны
         except ValueError:
-            pass
+            print('Ошибка!')
 
 result = generate_number()
 
