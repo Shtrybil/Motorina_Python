@@ -1,11 +1,17 @@
 #В последовательности на n целых элементов найти произведение элементов
 # средней трети
-nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-n = len(nums)
+import  random
+n = int(input("введите число n"))
+lst = []
+for num in range(n):
+    num = random.randint(0, 50)
+    lst.append(num)
+print(lst)
+n = len(lst)
 start = n // 3
 end = (2 * n) // 3
 res = 1
-for x in nums[start:end]:
+for x in lst[start:end]:
     res *= x
-print("Средняя треть:", nums[start:end])
+print("Средняя треть:", lst[start:end])
 print("Произведение:", res)
