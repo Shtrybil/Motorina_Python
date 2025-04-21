@@ -1,7 +1,10 @@
 #Составить генератор (yield), который преобразует все буквенные символы в
 # строчные.
-s = "Hello, World!"
-gen = (c.lower() for c in s)
-res = ''.join(gen)
-print("Исходная строка:", s)
-print("Результат:", res)
+
+def lower_gen(text):
+    for i in text:
+        yield i.lower()
+
+text = "От УЛЫБКИ хмурый день СВЕТЛЕЙ!"
+chars = [char for char in lower_gen(text)]
+print(''.join(chars))

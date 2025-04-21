@@ -19,9 +19,9 @@ average = sum(numbers) / count
 num = []
 for i in range(count):
     if i == 0:
-        new_num = (numbers[i] + numbers[i+1])**2
+        new_num = (numbers[i+1])**2
     elif i == count-1:
-        new_num = (numbers[i] + numbers[i-1])**2
+        new_num = (numbers[i-1])**2
     else:
         new_num = (numbers[i-1] + numbers[i+1])**2
     num.append(new_num)
