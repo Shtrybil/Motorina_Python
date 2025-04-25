@@ -10,6 +10,6 @@ for row in listik:
     print(row)
 
 print("\nИзмененная матрица:")
-result = [[x * 3 if x % 3 == 0 else x for x in i] for i in listik]
+result = [[x * 3 if not x % 3 else x for x in i] for i in listik]
 for i in result:
     print(i)
