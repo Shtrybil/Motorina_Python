@@ -4,7 +4,7 @@
 A = list(map(int, input("Введите 10 целых чисел через пробел: ").split()))
 last_index = 0
 try:
-    for i in range(10):
+    for i in range(6):
         if A[0] < A[i] < A[-1]:
             last_index = i
 except IndexError:
