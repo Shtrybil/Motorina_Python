@@ -26,11 +26,10 @@ with sq.connect('insurance_company.db') as con:
         дата_заключения TEXT NOT NULL,
         страховая_сумма INTEGER NOT NULL,
         вид_страхования TEXT NOT NULL,
-        тарифная_ставка INTEGER NOT NULL,
+        тарифная_ставка REAL NOT NULL,
         филиал TEXT NOT NULL
     )""")
     cur.executemany("INSERT INTO Договор VALUES(?, ?, ?, ?, ?, ?)", insurance_data)
-
 
 print("\nДоговоры автострахования:")
 cur.execute("SELECT * FROM Договор WHERE вид_страхования = 'Автострахование'")
@@ -46,7 +45,6 @@ print("\nДоговоры с суммой более 1 млн:")
 cur.execute("SELECT * FROM Договор WHERE страховая_сумма > 1000000")
 for row in cur.fetchall():
     print(row)
-
 
 cur.execute("DELETE FROM Договор WHERE id = 4")
 print("\nДоговор с id=4 удален")
