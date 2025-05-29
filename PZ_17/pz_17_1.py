@@ -7,7 +7,7 @@ from tkinter import ttk
 
 root = Tk()
 root.title('Testform')
-root.geometry('500x450')
+root.geometry('650x450')
 
 padx = 10 # гор отступ
 pady = 5
@@ -57,7 +57,7 @@ text1.grid(row=5, column=1, sticky='w', padx=padx, pady=pady)
 
 
 buttons_frame = Frame(root)
-buttons_frame.grid(row=6, column=1, sticky='e', pady=15)
+buttons_frame.grid(row=6, column=2, sticky='e', pady=15)
 
 Button(buttons_frame, text='Cancel', width=10).pack(side=LEFT, padx=5)
 Button(buttons_frame, text='Submit', width=10).pack(side=LEFT, padx=5)
