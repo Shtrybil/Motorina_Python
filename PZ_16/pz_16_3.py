@@ -2,7 +2,7 @@
 # сохранять информацию из экземпляров класса (3 шт.) в файл и загружать ее обратно.
 # Использовать модуль pickle для сериализации и десериализации объектов Python в бинарном формате.
 import pickle
-from PZ_16.pz_16_1 import c1, c2
+from PZ_16.pz_16_1 import c1, c2, c3
 
 def save_def(circles, file):
     with open(file, 'wb') as f:
@@ -13,7 +13,7 @@ def load_def(file):
         return pickle.load(f)
 
 # Сохраняем круги в файл
-save_def([c1, c2], 'circles.pkl')
+save_def([c1, c2, c3], 'circles.pkl')
 
 # Загружаем
 loaded = load_def('circles.pkl')
